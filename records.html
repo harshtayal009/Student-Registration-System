@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Harsh Tayal">
+    <meta name="description" content="Student Registration System by using HTML , CSS and JS.">
+    <title>Student Registration System's Records</title>
+    <!-- add style tag -->
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body
+        {
+            background:linear-gradient(150deg,lightyellow,green);
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .tablecontent
+        {
+            max-height: 500px;
+            /* add scrollbar dynamically  */
+            overflow-y: auto;
+            overflow-x: hidden;
+            border: 1px solid black;
+            margin: 200px auto;
+            width: 50vw;
+
+        }
+        table
+        {
+            width: 98%;
+            background-color:rgb(127, 201, 112);
+        }
+        table,tr
+        {
+            border: 1px solid black;
+            border-collapse:collapse;
+            text-align: center;
+        }
+        td,th
+        {
+            padding: 8px;
+        }
+        button
+        {
+            background:lightblue;
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+        button:hover
+        {
+            box-shadow: 2px 2px 3px black;
+        }
+        button:active
+        {
+            color: red;
+            background-color: lightgray;
+        }
+        tr
+        {
+            transition: all 0.3s;
+        }
+        tr:hover
+        {
+            background-color: rgb(148, 147, 147,0.3);
+        }
+        td
+        {
+            font-weight: 500;
+            padding-right: 10px;
+        }
+        @media (min-width:1150px)
+        {
+            .tablecontent
+            {
+                border: none;
+            }
+        }
+        @media (max-width:1180px)
+        {
+            .tablecontent
+            {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- table  -->
+    <div class="tablecontent">
+        <table>
+            <thead>
+              <tr>
+                 <th>Name</th>
+                 <th>Id</th>
+                 <th>Contact</th>
+                 <th colspan="3" style="text-align:left; padding-left: 50px;">Email</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <!-- attach js file -->
+    <script src="app.js"></script>
+</body>
+</html>

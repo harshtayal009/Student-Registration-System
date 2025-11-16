@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Harsh Tayal">
+    <meta name="description" content="Student Registration System by using HTML , CSS and JS.">
+    <title>Student Registration System</title>
+    <!-- attach css file i.e style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="logo">STUDENT REGISTRATION SYSTEM</div>
+        <input type="checkbox" id="hum">
+        <label for="hum" class="menu">&#9776</label>
+        <nav>
+            <ul>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="records.html" target="_blank">Records</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- form -->
+    <div class="form-container">
+        <h2>Student Registration Form</h2>
+        <form action="/action">
+                <div class="name">
+                     <label for="student_name">Student Name</label>
+                     <!-- here we use pattern to validate the name -->
+                     <input type="text" id="student_name" name="student_name" placeholder="Enter your name" pattern="[A-Za-z ]{3,30}" required>
+                </div>
+                <div class="id">
+                     <label for="student_id">Student Id</label>
+                     <!-- here we use pattern attribute to validate id no. that takes only number -->
+                     <input type="text" id="student_id" name="student_id" placeholder="Enter id no." pattern="[0-9]{1,30}" required>
+                </div>
+                <div class="mail">
+                     <label for="student_email">Student Email</label>
+                     <!-- here we use pattern attribute to validate email id that takes only input in form email syntax -->
+                     <input type="email" id="student_email" name="student_email" placeholder="Enter your email"  required>
+                </div>
+                <div class="contact">
+                     <label for="student_contact">Student Contact</label>
+                     <!-- here we validate mobile no. by using pattern attribute and takes only 10 digits  -->
+                     <input type="text" id="student_contact" name="student_contact" placeholder="Enter your contact no." pattern="[0-9]{10}" required>
+                </div>
+               <div class="btn">
+                 <button type="submit">ADD</button>
+                <button type="reset">Reset</button>
+               </div>
+        </form>
+    </div>
+    <!-- js file attach -->
+    <script src="app.js"></script>
+</body>
+</html>

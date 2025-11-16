@@ -1,0 +1,233 @@
+/* form style and header style */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header styling */
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    font-weight: 700;
+    background-color:#315488;
+    color: white;
+    width: 100%;
+}
+#hum
+{
+    display: none;
+}
+.menu
+{
+    display: none;
+}
+nav ul
+{
+    display: flex;
+    padding: 5px;
+}
+ul li
+{
+    list-style: none;
+    margin-right: 20px;
+}
+li a
+{
+    text-decoration: none;
+}
+a
+{
+    display: inline-block;
+    transition:all 0.4s ease;
+    color: white;
+    font-weight: 400;
+}
+a:hover
+{
+    border-bottom: 2px solid black;
+    padding-bottom: 1px;
+    transform: scale(1.1);
+    text-shadow: 3px 3px 5px black;
+}
+/* form styling */
+.form-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    /* background-color: cadetblue; */
+    flex-direction: column;
+}
+h2{
+    margin-bottom: 5px;
+    transition: 0.3s;
+    white-space: nowrap;
+    font-weight: 600;
+}
+h2:hover
+{
+     text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+form
+{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+    gap: 10px;
+    width: 90%;
+    max-width: 600px;
+    height: 50vh;
+    padding: 20px;
+    /* margin: auto; */
+    background-color:lightgray;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px black;
+}
+.name, .mail, .contact, .id
+{
+    display: flex;
+    flex-direction: column;
+}
+label
+{
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 6px;
+    transition: 0.4s;
+}
+input
+{
+    border:2px solid black;
+    border-radius: 5px;
+    width: 100%;
+    padding: 6px;
+    transition: 0.4s;
+}
+button
+{
+    border-radius: 5px;
+    font-size: 1.2em;
+    padding: 5px;
+    transition: 0.4s;
+}
+.btn
+{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    grid-column: span 2;
+}
+/* here we use pseudo classes */
+button:hover
+{
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+button:active
+{
+    color: red;
+    background-color: lightgray;
+}
+input:focus
+{
+    border-color:#3b82f6;
+    box-shadow: 2px 2px 10px 2px rgba(3, 34, 83, 0.6);
+}
+input[type=text]
+{
+    color:black;
+}
+label:hover
+{
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+/* here we use media query */
+@media (max-width:500px)
+{
+    form
+    {
+        grid-template-columns: 1fr !important;
+    }
+    .btn
+    {
+        grid-column: span 1;
+        display: flex;
+        justify-content: center;
+    }
+}
+body
+{
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
+}
+/* for down menu */
+@media (max-width:485px)
+{
+    .menu
+    {
+        display: block;
+        right: 20px;
+        position: absolute;
+    }
+    nav ul
+    {
+        position:absolute;
+        top:22px;
+        right: 0px;
+        background-color: #1498c3;
+        border: 2px solid black;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        padding: 1px;
+        text-align: center;
+
+    }
+    ul
+    {
+        border: 2px solid black;
+        width: 40%;
+        transition: 0.4s ease;
+    }
+    li{
+        transition: 0.4s ease;
+        width: 100%;
+        margin: 1px;
+    }
+    ul li:hover
+    {
+        background-color: rgba(90, 87, 87, 0.3);
+    }
+    #hum:checked + .menu +nav ul
+    {
+        display: flex;
+    }
+}
+/* for heading2 */
+@media (max-width:360px)
+    {
+        h2
+        {
+            font-size: 1.1em;
+        }
+    }
+@media (max-width:320px)
+{
+    .logo{
+        font-size: 11px;
+        width: 40%;
+        white-space: nowrap;
+        
+    }
+    .menu
+    {
+        font-size: 11px;
+    }
+}    
